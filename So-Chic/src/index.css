@@ -22,31 +22,32 @@ body {
 }
 
 .header {
-  width: 90vw;
+  width: 100vw;
   height: 150px;
   padding: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 30px;
 }
 
 .navbar {
   border: 1px solid #069494;
   border-radius: 80px;
-  width: 90vw;
+  width: 100vw;
   height: 60px;
   font-family: 'Fascinate', sans-serif;
   font-size: 25px;
   display: flex;
   flex-direction: row;
-  color: #3a0884;
+  color: #28065a;
  -webkit-box-shadow: 0px 0px 30px 5px #4ADE80; 
-box-shadow: 0px 0px 40px -18px #069494;
-;
+  box-shadow: 0px 0px 40px -18px #069494;
 
 }
+
+
 
 .nav-li {
   border: 1px solid #069494;
@@ -59,30 +60,93 @@ box-shadow: 0px 0px 40px -18px #069494;
   flex-grow: 1;
 }
 
-.no-left {
-  border-left: none;
+.L {
+  border: none;
 }
 
-.no-right {
-  border-right: none;
+.R {
+  border: none;
 }
+
 
 .btn {
   font-size: 25px;
-  color: #3a0884;
+  color: #28065a;
   border: none;
   border-radius: 30px;
   padding: 10px;
+  border: 1px solid #069494
  
 }
 
 .head-btns {
-  width: 5em;
+  width: 7em;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
+
+.main-ads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.ads {
+  border: none;
+  border-radius: 30px;
+  margin: 25px;
+  width: 97em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff8253;
+  padding: 30px;
+}
+
+.model {
+  width: 450px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.model-one {
+  width: 450px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.model-two {
+  width: 450px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.ads-two {
+  border-radius: 30px;
+  background-color: #fce883;
+  width: 48em;
+  height: 45em;
+  padding: 10px;
+  margin: 0 15px;
+}
+
+.ads-three {
+  border-radius: 30px;
+  background-color: #ff9ce9;
+  width: 48em;
+  height: 45em;
+  padding: 10px;
+  margin: 0 15px;
+}
+
 
 
 

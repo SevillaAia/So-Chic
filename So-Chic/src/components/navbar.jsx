@@ -17,13 +17,13 @@ function Navbar() {
         </div>
     </header>
     <nav className='navbar'>
-        <div className='nav-li no-left'>
+        <div className='nav-li L'>
             <p>Home</p>
         </div>
-        <div className='nav-li'>
+        <div className='nav-li bordered'>
             <p>About Us</p>
         </div>
-        <div className='nav-li no-right'>
+        <div className='nav-li R'>
             <p>Collections</p>
         </div>
     </nav>
