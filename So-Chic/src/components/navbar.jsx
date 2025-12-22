@@ -1,19 +1,19 @@
 import React from 'react'
 import logo from '../assets/SoChicLogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   return (
     <>
     <header className='header'>
-        <button className='account-btn btn'> <FontAwesomeIcon icon={faUser} /></button> 
+        <button className='account-btn btn'> <FontAwesomeIcon icon={faCircleUser} /></button> 
         <img className="logo" src={logo} alt="SoChic logo" />
         <div className='head-btns'>
             <button className='wish-btn btn'><FontAwesomeIcon icon={faHeart} /></button>
-            <button className='cart-btn btn'><FontAwesomeIcon icon={faCartShopping} /></button>
+            <button className='cart-btn btn'><FontAwesomeIcon icon={faBasketShopping} /></button>
         </div>
     </header>
     <nav className='navbar'>

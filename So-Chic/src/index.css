@@ -12,7 +12,7 @@ body {
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -35,7 +35,7 @@ body {
 .navbar {
   border: 1px solid #069494;
   border-radius: 80px;
-  width: 100vw;
+  width: 95vw;
   height: 60px;
   font-family: 'Fascinate', sans-serif;
   font-size: 25px;
@@ -44,9 +44,9 @@ body {
   color: #28065a;
  -webkit-box-shadow: 0px 0px 30px 5px #4ADE80; 
   box-shadow: 0px 0px 40px -18px #069494;
+  margin: 0 45px;
 
 }
-
 
 
 .nav-li {
@@ -71,11 +71,11 @@ body {
 
 .btn {
   font-size: 25px;
-  color: #28065a;
+  color: #74c0fc;
   border: none;
   border-radius: 30px;
   padding: 10px;
-  border: 1px solid #069494
+  /* border: 1px solid #069494 */
  
 }
 
@@ -92,39 +92,60 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  border: 1px solid black;
 }
 
 .ads {
   border: none;
   border-radius: 30px;
   margin: 25px;
-  width: 97em;
+  width: 80em;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #ff8253;
   padding: 30px;
+  font-family: 'Lato';
+}
+
+.ads h2 {
+  font-size: 50px;
+}
+
+.ads p {
+  line-height: 1.5rem;
+}
+
+.ad-content {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 20px;
+  width: 40em;
 }
 
 .model {
-  width: 450px;
-  height: 500px;
-  border-radius: 20px;
+  width: 570px;
+  height: 470px;
+  border-radius: 30px;
+  padding: 20px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .model-one {
-  width: 450px;
-  height: 400px;
+  width: 550px;
+  height: 450px;
   border-radius: 20px;
+  padding: 10px;
   object-fit: cover;
   object-position: center top;
 }
 
 .model-two {
-  width: 450px;
-  height: 400px;
+  width: 550px;
+  height: 450px;
   border-radius: 20px;
+  padding: 10px;
   object-fit: cover;
   object-position: center top;
 }
@@ -132,22 +153,54 @@ body {
 .ads-two {
   border-radius: 30px;
   background-color: #fce883;
-  width: 48em;
+  width: 40em;
   height: 45em;
-  padding: 10px;
-  margin: 0 15px;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+} 
 
 .ads-three {
   border-radius: 30px;
   background-color: #ff9ce9;
-  width: 48em;
+  width: 40em;
   height: 45em;
-  padding: 10px;
-  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  padding-bottom: 30px;
 }
 
+.content-two {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 20px;
+  width: 30em;
+}
 
+.footer-logo {
+  width: 250px;
+  height: 250px;
+}
 
+.footer {
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.address, 
+.socials {
+  border: 1px solid red;
+  width: 50%;
+  height: 400px;
+}
 
 
