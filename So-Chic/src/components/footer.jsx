@@ -15,7 +15,7 @@ function Footer() {
                 10407, <br/>
                 Berlin <br/>
             </address>
-            <p>Call Us: +49 30 40365894</p>
+            <p>Contact Us: +49 30 40365894</p>
         </div>
         <div className='socials'>
             <div>

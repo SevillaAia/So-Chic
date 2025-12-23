@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -24,13 +25,19 @@ function Navbar() {
       </header>
       <nav className="navbar">
         <div className="nav-li L">
+         <Link to='/'>
           <p>Home</p>
+          </Link>
         </div>
         <div className="nav-li bordered">
+          <Link to='/about'>
           <p>About Us</p>
+          </Link>
         </div>
         <div className="nav-li R">
+          <Link>
           <p>Collections</p>
+          </Link>
         </div>
       </nav>
     </>
