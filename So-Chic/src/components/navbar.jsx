@@ -13,7 +13,9 @@ function Navbar() {
         <button className="account-btn btn">
           <FontAwesomeIcon icon={faCircleUser} />
         </button>
-        <img className="logo" src={logo} alt="SoChic logo" />
+        <Link to="/" className="logo-link">
+          <img className="logo" src={logo} alt="SoChic logo" />
+        </Link>
         <div className="head-btns">
           <button className="wish-btn btn">
             <FontAwesomeIcon icon={faHeart} />
@@ -35,8 +37,8 @@ function Navbar() {
           </Link>
         </div>
         <div className="nav-li R">
-          <Link>
-          <p>Collections</p>
+          <Link to="/collections">
+            <p>Collections</p>
           </Link>
         </div>
       </nav>

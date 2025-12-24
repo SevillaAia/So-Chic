@@ -225,3 +225,30 @@ body {
 .address {
   background-color: #ffc2ba;
 }
+
+.productImg {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+} 
+
+.product-card {
+  border: 1px solid #ff2f94;
+  border-radius: 20px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 15px 2px #f1ade3; 
+  box-shadow: 0px 0px 15px 2px #f0c1e1;
+}

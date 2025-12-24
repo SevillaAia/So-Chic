@@ -1,4 +1,8 @@
 import React, {useState} from 'react'
+import image from '../assets/defaultPic.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+
 
 function ProductList() {
   const [products, setProducts] = useState([
@@ -136,15 +140,32 @@ function ProductList() {
     }
   ])
 
+  const [counts, setCounts] = useState(0);
+
   return (
     <>
       <div className="product-list">
         {products.map(product => (
           <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.name} />
+            <div>
+              <button onClick={() => setCounts(prev => ({
+                ...prev,[product.id]: (prev[product.id] || 0) + 1
+               }))
+              }
+            >
+                <FontAwesomeIcon icon={faHeart} />
+                <span>{counts[product.id] || 0}</span>
+              </button>
+
+           </div> 
+            <img className="productImg" src={image} alt={product.name} />
             <h3>{product.name}</h3>
             <p>{product.category} — ${product.price}</p>
             <p>{product.description}</p>
+            <div>
+              <button>Add to cart</button>
+              <button> Add to wish</button>
+            </div>
           </div>
         ))}
       </div>
