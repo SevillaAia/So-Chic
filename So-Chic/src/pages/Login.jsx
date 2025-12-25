@@ -1,7 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
+
 
 
 function Login() {
+
+  const [account, setAccount] = useState([
+  {id: 1, username: 'jane_doe', password: 'password123'},
+  {id: 2, username: 'john_smith', password: 'mypassword'}, 
+  ]
+);
+
   return (
   
      <div className='login-container'>
@@ -20,12 +29,16 @@ function Login() {
           </span>
           <input type='text' placeholder='password' className='input' />
           <button className='log-submit'>
-          submit
+          Log In
         </button>
         </form>
         
 
-        <p>Not a Chicster yet?<br />Click <a href="/Register">here</a> to create an account</p>
+        <p>Not a Chicster yet?<br />Click 
+        <Link to="/Register">
+         here
+         </Link>
+           to create an account</p>
         </div>
      
 

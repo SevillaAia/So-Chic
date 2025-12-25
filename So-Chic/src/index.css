@@ -345,6 +345,14 @@ body {
   border-bottom-color: #e670a9;
  }
 
+ .logIn-form h2 {
+  margin-bottom: 10px;
+  color: #28065a;
+  font-family: 'Lobster Two', cursive;
+  font-size: 36px;
+  text-align: center;
+ }
+
  .log-submit {
   margin-top: 20px;
   padding: 10px 20px;

@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Content from "./pages/Content";
 import AboutUs from "./pages/AboutUs";
 import ProductList from "./pages/ProductList";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           {/* Auth pages (no navbar/footer) */}
           <Route element={<AuthLayout />}>
             <Route path="/login" element={<Login />} />
+            <Route path="/Register" element={<Register />} />
           </Route>
 
           {/* Main App pages */}
