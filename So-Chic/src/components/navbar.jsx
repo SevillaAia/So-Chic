@@ -36,9 +36,16 @@ function Navbar() {
           <p>About Us</p>
           </Link>
         </div>
-        <div className="nav-li R">
+        <div className="nav-li">
           <Link to="/collections">
             <p>Collections</p>
+          </Link>
+        </div>
+        <div>
+          <Link to="/Login">
+          <div className="nav-li R">
+            <p>Log Out</p>
+          </div>
           </Link>
         </div>
       </nav>
