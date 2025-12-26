@@ -33,9 +33,7 @@ body {
 }
 
 .navbar {
-  border: 1px solid #069494;
-  border-radius: 80px;
-  width: 95vw;
+  width: 100vw;
   height: 60px;
   font-family: 'Limelight', sans-serif;
   font-size: 25px;
@@ -43,29 +41,40 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   color: #28065a;
- -webkit-box-shadow: 0px 0px 30px 5px #4ADE80; 
-  box-shadow: 0px 0px 40px -18px #069494;
   margin: 0 45px;
+  font-size: 20px;
 }
 
+.nav-li a,
+.nav-li a:hover,
+.nav-li a:active,
+.nav-li a:visited,
+.nav-li a:focus
+.nav-li a * {
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-color: transparent;
+  list-style: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: inherit;
+  color: #28065a;
+
+}
 
 .nav-li {
-  border: 1px solid #069494;
   width: 15em;
-  height: 60px;
+  height: 50px;
   text-align: center;
   padding: 10px;
   border-top: none;
   border-bottom: none;
   flex-grow: 1;
-}
-
-.L {
-  border: none;
-}
-
-.R {
-  border: none;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: 1px solid rgba(255, 255, 255, 0.74);
 }
 
 
@@ -228,10 +237,10 @@ body {
 
 .productImg {
   width: 200px;
-  height: 300px;
+  height: auto;
   border-radius: 20px;
   object-fit: contain;
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 .product-list {
@@ -243,15 +252,45 @@ body {
 } 
 
 .product-card {
-  border: 1px solid #ff2f94;
+  border: 1px solid #f8e6ef;
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px;
   width: 400px;
   text-align: center;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 0px 15px 2px #f1ade3; 
   box-shadow: 0px 0px 15px 2px #f0c1e1;
 }
+
+.like-btn {
+  background: pink;
+  border: 1px solid #e283b1;
+  border-radius: 30px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ff2f94;
+  margin-top: 10px;
+}
+
+.add-btn {
+  background: pink;
+  border: 1px solid #e283b1;
+  border-radius: 30px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size:12px;
+  color: #ff2f94;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.add-btn:hover,
+.like-btn:hover {
+  background-color: #ff2f94;
+  color: white;
+}
+
 
 .aboutUs {
   width: 80vw;
@@ -275,12 +314,14 @@ body {
 .auth-pages {
   background-image: url('.assets/loginBg');
 }
+
 .login-container {
   width: 70em;
   height: 50em;
   display: flex;
   flex-direction: row;
 }
+
  .logIn-form {
     height: 50em;
     width: 30em;
@@ -348,7 +389,7 @@ body {
  .logIn-form h2 {
   margin-bottom: 10px;
   color: #28065a;
-  font-family: 'Lobster Two', cursive;
+  font-family: 'Lobster', cursive;
   font-size: 36px;
   text-align: center;
  }
@@ -367,4 +408,60 @@ body {
 
  .log-submit:hover {
   background-color: #e02685;
+ }
+
+ .reg-container {
+  width: 70em;
+  height: 50em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.reg-container h2 {
+  margin-bottom: 10px;
+  color: #28065a;
+  font-family: 'Lobster', cursive;
+  font-size: 36px;
+  text-align: center;
+  text-shadow: #f1ade3 2px 2px 4px;
+ }
+
+ .register {
+    border: 1px solid #ffff;
+    border-radius: 30px;
+    height: 30em;
+    width: 30em;
+    background-color: #f0c1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px 2px #f0c1e1;
+ }
+
+ .reg-input {
+  border: none;
+  border-radius: 30px;
+  outline: none;         
+  padding: 10px 10px;
+  font-size: 16px;
+  background: ffff;
+  margin: 10px;
+  width: 20em;
+ }
+
+ .reg-submit {
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff2f94;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
  }

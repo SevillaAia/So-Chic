@@ -26,28 +26,30 @@ function Navbar() {
         </div>
       </header>
       <nav className="navbar">
-        <div className="nav-li L">
+        <div className="nav-li">
          <Link to='/'>
           <p>Home</p>
           </Link>
         </div>
-        <div className="nav-li bordered">
+
+        <div className="nav-li">
           <Link to='/about'>
           <p>About Us</p>
           </Link>
         </div>
+
         <div className="nav-li">
           <Link to="/collections">
             <p>Collections</p>
           </Link>
         </div>
-        <div>
-          <Link to="/Login">
-          <div className="nav-li R">
+
+        <div className="nav-li">
+            <Link to="/Login">
             <p>Log Out</p>
+            </Link>
           </div>
-          </Link>
-        </div>
+
       </nav>
     </>
   );

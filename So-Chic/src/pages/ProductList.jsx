@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import image from '../assets/defaultPic.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 
 function ProductList() {
@@ -148,7 +148,7 @@ function ProductList() {
         {products.map(product => (
           <div key={product.id} className="product-card">
             <div>
-              <button onClick={() => setCounts(prev => ({
+              <button className="like-btn" onClick={() => setCounts(prev => ({
                 ...prev,[product.id]: (prev[product.id] || 0) + 1
                }))
               }
@@ -163,8 +163,8 @@ function ProductList() {
             <p>{product.category} — ${product.price}</p>
             <p>{product.description}</p>
             <div>
-              <button>Add to cart</button>
-              <button> Add to wish</button>
+              <button className='add-btn'>Add to cart</button>
+              <button className='add-btn'> Wishlist </button>
             </div>
           </div>
         ))}
