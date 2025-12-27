@@ -1,51 +1,101 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
-
-
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [useMock, setUseMock] = useState(true); // Toggle for mock or real login
+  const navigate = useNavigate();
 
-  const [account, setAccount] = useState([
-  {id: 1, username: 'jane_doe', password: 'password123'},
-  {id: 2, username: 'john_smith', password: 'mypassword'}, 
-  ]
-);
+  // Mock users data
+  const mockUsers = [
+    { username: "testuser", password: "testpass" },
+    { username: "jane", password: "doe123" },
+    { username: "admin", password: "admin" },
+  ];
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (username === "" || password === "") {
+      setError("Please enter both username and password.");
+      return;
+    }
+    setError("");
+    if (useMock) {
+      // Mock login logic
+      const found = mockUsers.find(
+        (user) => user.username === username && user.password === password
+      );
+      if (found) {
+        // Redirect to Home page
+        navigate("/");
+      } else {
+        setError("Invalid username or password (mock).");
+      }
+      return;
+    }
+    try {
+      // Real backend login
+      const response = await axios.post("http://localhost:5005/api/login", {
+        username,
+        password,
+      });
+      // Redirect to Home page on successful login
+      navigate("/");
+    } catch (err) {
+      setError(
+        err.response?.data?.message || "Login failed. Please try again."
+      );
+    }
+  };
 
   return (
-  
-     <div className='login-container'>
-
-      <div className='log-info'>
-      </div>
-      <div className='logIn-form'>
-          <h2>Welcome</h2>
-
-         <form className='login'>
+    <div className="login-container">
+      <div className="log-info"></div>
+      <div className="logIn-form">
+        <h2>Welcome</h2>
+        <form className="login" onSubmit={handleLogin}>
           <span>Username:</span>
-          <input type="text" placeholder='e.g. jane_doe@email.com' className='input'/>
-
-          <span>
-            Password:
-          </span>
-          <input type='text' placeholder='password' className='input' />
-          <button className='log-submit'>
-          Log In
-        </button>
+          <input
+            type="text"
+            placeholder="e.g. jane_doe@email.com"
+            className="input"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <span>Password:</span>
+          <input
+            type="password"
+            placeholder="password"
+            className="input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="log-submit" type="submit">
+            Log In
+          </button>
         </form>
-        
-
-        <p>Not a Chicster yet?<br />Click 
-        <Link to="/Register">
-         here
-         </Link>
-           to create an account</p>
+        <div style={{ margin: "10px 0" }}>
+          <label>
+            <input
+              type="checkbox"
+              checked={useMock}
+              onChange={() => setUseMock((v) => !v)}
+            />
+            Use mock users
+          </label>
         </div>
-     
-
-    
-        
+        {error && <div className="error">{error}</div>}
+        <p>
+          Not a Chicster yet?
+          <br />
+          Click <Link to="/Register">here</Link> to create an account
+        </p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;
