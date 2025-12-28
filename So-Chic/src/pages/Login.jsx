@@ -85,7 +85,7 @@ function Login() {
             Log In
           </button>
         </form>
-        <div style={{ margin: "10px 0" }}>
+        <div className="check-mock">
           <label>
             <input
               type="checkbox"
