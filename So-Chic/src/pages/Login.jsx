@@ -29,8 +29,12 @@ function Login() {
         (user) => user.username === username && user.password === password
       );
       if (found) {
-        // Redirect to Home page
-        navigate("/");
+        // If admin, redirect to admin page, else to Home
+        if (username === "admin") {
+          navigate("/admin");
+        } else {
+          navigate("/");
+        }
       } else {
         setError("Invalid username or password (mock).");
       }
@@ -42,8 +46,12 @@ function Login() {
         username,
         password,
       });
-      // Redirect to Home page on successful login
-      navigate("/");
+      // If admin, redirect to admin page, else to Home
+      if (username === "admin") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
     } catch (err) {
       setError(
         err.response?.data?.message || "Login failed. Please try again."
