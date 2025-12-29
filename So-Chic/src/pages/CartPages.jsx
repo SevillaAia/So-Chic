@@ -9,17 +9,16 @@ function CartPages() {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await axios.get("http://localhost:5005/api/cart");
+        const response = await axios.get("http://localhost:5005/cart");
         setCartItems(response.data);
-      } catch (error) {
-      }
+      } catch (error) {}
     };
     fetchCart();
   }, []);
 
   const removeFromCart = async (id) => {
     try {
-      await axios.delete(`http://localhost:5005/api/cart/${id}`);
+      await axios.delete(`http://localhost:5005/cart/${id}`);
       setCartItems(cartItems.filter((item) => item._id !== id));
     } catch (error) {
       console.log("Delete failed");
@@ -39,22 +38,20 @@ function CartPages() {
           </div>
         ) : (
           <>
-            <ul className="cart"> 
+            <ul className="cart">
               {cartItems.map((item) => (
                 <li key={item._id} className="cart-item">
-                  <span>{item.name} - ${item.price}</span>
-                  <button 
-                    onClick={() => removeFromCart(item._id)}
-                  >
+                  <span>
+                    {item.name} - ${item.price}
+                  </span>
+                  <button onClick={() => removeFromCart(item._id)}>
                     Remove
                   </button>
                 </li>
               ))}
             </ul>
 
-            <button className="reg-submit">
-              Checkout
-            </button>
+            <button className="reg-submit">Checkout</button>
           </>
         )}
       </div>

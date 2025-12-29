@@ -36,7 +36,7 @@ function Login() {
           navigate("/");
         }
       } else {
-        setError("Invalid username or password (mock).");
+        setError("Invalid username or password.");
       }
       return;
     }
