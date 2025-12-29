@@ -483,6 +483,7 @@ body {
 .admin-layout {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
   width: 100vw;
 }
@@ -511,22 +512,75 @@ body {
 }
 
 .admin-nav li {
-  font-size: 20px;
+  font-size: 16px;
   color: #28065a;
   cursor: pointer;
   width: 18em;
   text-align: center;
   padding: 10px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(236, 230, 230, 0.336);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
+  box-shadow: #c8c6ca 0px 0px 12px 2px;
   flex-grow: 1;
+  text-transform: uppercase;
 }
 
 .admin-links ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(243, 243, 243);
+  box-shadow: 0px 0px 15px 2px #969195;
+  border-radius: 30px;
+  width: 60em;
+  padding: 40px;
+  background-color: rgb(201, 225, 247);
+  height: 60em;
+  margin: 30px;
+  overflow-y: hidden;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50em;
+  padding: 20px;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgb(131, 126, 126) 2px 2px 4px;
+  background-color: #72b7fc;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.form-container button:hover {
+  background-color: #4691fc;
 }

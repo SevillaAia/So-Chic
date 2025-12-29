@@ -55,13 +55,11 @@ function Admin() {
 
   return (
     <>
-      <div className="admin-page">
-        <h1>Admin Page</h1>
-        <p>Welcome, Admin! Here you can manage the application.</p>
-      </div>
-      <div className="form-container">
+      <div className="admin-container">
+        <h3>Welcome, Admin! Here you can manage your Products.</h3>
+
         <h2>Product Entry</h2>
-        <form onSubmit={handleSubmit}>
+        <form className="form-container" onSubmit={handleSubmit}>
           <p>Product Name:</p>
           <input
             name="name"
@@ -144,7 +142,7 @@ function Admin() {
             onChange={handleChange}
             placeholder="Description"
           />
-          <button type="submit">Create product</button>
+          <button type="submit">submit</button>
           {message && <div>{message}</div>}
         </form>
       </div>
