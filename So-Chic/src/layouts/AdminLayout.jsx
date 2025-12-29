@@ -5,8 +5,10 @@ import AdminNav from "../components/AdminNav.jsx";
 function AdminLayout() {
   return (
     <>
-      <AdminNav />
-      <Outlet />
+      <div className="admin-layout">
+        <AdminNav />
+        <Outlet />
+      </div>
     </>
   );
 }

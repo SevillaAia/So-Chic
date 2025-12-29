@@ -42,7 +42,7 @@ function Login() {
     }
     try {
       // Real backend login
-      const response = await axios.post("http://localhost:5005/api/login", {
+      const response = await axios.post("http://localhost:5005/users", {
         username,
         password,
       });
@@ -85,7 +85,7 @@ function Login() {
             Log In
           </button>
         </form>
-        <div style={{ margin: "10px 0" }}>
+        <div className="check-mock">
           <label>
             <input
               type="checkbox"
