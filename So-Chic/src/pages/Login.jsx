@@ -42,7 +42,7 @@ function Login() {
     }
     try {
       // Real backend login
-      const response = await axios.post("http://localhost:5005/api/login", {
+      const response = await axios.post("http://localhost:5005/users", {
         username,
         password,
       });
