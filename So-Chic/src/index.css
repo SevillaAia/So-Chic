@@ -615,3 +615,17 @@ body {
   color: white;
   box-shadow: #969195 2px 2px 4px;
 }
+
+.users-list {
+  width: 90%;
+  margin: 20px;
+  border: 1px solid #050303;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
