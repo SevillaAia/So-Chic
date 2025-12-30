@@ -8,32 +8,48 @@ function Wishlist() {
   useEffect(() => {
     const fetchWishlist = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5005/wishlist"
-        );
+        const response = await axios.get("http://localhost:5005/wishlist");
         setItems(response.data);
       } catch (error) {
+        setErrorMessage("Failed to load wishlist");
       }
     };
-
     fetchWishlist();
   }, []);
+
+  const removeFromWishlist = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5005/wishlist/${id}`);
+      setItems(items.filter((item) => item.id !== id));
+    } catch (error) {
+      console.log("Delete failed");
+    }
+  };
+
+  if (items.length === 0) {
+    return (
+      <div className="reg-container">
+        <h2>Your Wishlist</h2>
+        <div className="register">
+          <p className="empty">Your wishlist is currently empty.</p>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <div className="reg-container">
       <h2>Your Wishlist</h2>
-
       <div className="register">
         {errorMessage && <div className="error">{errorMessage}</div>}
-
-        {items.length === 0 && (
-          <p className="empty">Your wishlist currently is empty.</p>
-        )}
-
         <ul className="wishlist">
           {items.map((item) => (
-            <li key={item._id} className="wishlist-item">
-              <span>{item.name}</span>
+            <li key={item.id} className="wishlist-item">
+              <span>{item.name} - ${item.price}</span>
+              <button onClick={() => removeFromWishlist(item.id)}>
+                Remove
+              </button>
             </li>
           ))}
         </ul>
@@ -43,9 +59,6 @@ function Wishlist() {
 }
 
 export default Wishlist;
-
-
-
 
 
 
