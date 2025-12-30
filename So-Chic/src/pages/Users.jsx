@@ -19,7 +19,7 @@ function Users() {
 
   return (
     <>
-      <h2>Users</h2>
+      <h2>USER</h2>
       <div className="users-list">
         <ul>
           {users.map((user) => (
