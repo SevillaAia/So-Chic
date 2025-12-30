@@ -13,6 +13,10 @@ import Admin from "./pages/Admin";
 import UserProfile from "./pages/UserProfile";
 import Wishlist from "./pages/Wishlist";
 import CartPages from "./pages/CartPages";
+import Users from "./pages/Users";
+import Products from "./pages/Products";
+import Orders from "./pages/Orders";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -28,6 +32,10 @@ function App() {
           {/* Admin pages */}
           <Route element={<AdminLayout />}>
             <Route path="/admin" element={<Admin />} />
+            <Route path="/admin/users" element={<Users />} />
+            <Route path="/admin/products" element={<Products />} />
+            <Route path="/admin/orders" element={<Orders />} />
+            <Route path="/admin/settings" element={<Settings />} />
           </Route>
 
           {/* Main App pages */}

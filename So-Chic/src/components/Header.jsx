@@ -21,7 +21,7 @@ function Header() {
             <FontAwesomeIcon icon={faCircleUser} />
           </Link>
         </button>
-        <span>Welcome{user?.username && `, ${user.username}`}</span>
+        <span>Welcome{user?.username && ` ${user.username}!`}</span>
       </div>
 
       <Link to="/" className="logo-link">
