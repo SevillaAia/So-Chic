@@ -27,7 +27,7 @@ function Users() {
               <p>Name: {user.username}</p>
               <p>Email: {user.email}</p>
               <p>Role: {user.role}</p>
-              <button>Delete User</button>
+              <button className="del-user">Delete User</button>
             </div>
           ))}
         </ul>
