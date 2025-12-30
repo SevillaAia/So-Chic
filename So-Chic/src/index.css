@@ -629,3 +629,15 @@ body {
   padding: 15px;
   border-bottom: 1px solid #ccc;
 }
+
+.del-user {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
