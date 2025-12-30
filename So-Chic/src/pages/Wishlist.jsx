@@ -9,7 +9,7 @@ function Wishlist() {
     const fetchWishlist = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5005/api/wishlist"
+          "http://localhost:5005/wishlist"
         );
         setItems(response.data);
       } catch (error) {
