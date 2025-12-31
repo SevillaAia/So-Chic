@@ -617,7 +617,7 @@ body {
 }
 
 .users-list {
-  width: 90%;
+  width: 60%;
   margin: 20px;
   border: 1px solid #050303;
 }
@@ -628,4 +628,16 @@ body {
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid #ccc;
+}
+
+.del-user {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #85d1db;
+  color: rgb(15, 15, 15);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
