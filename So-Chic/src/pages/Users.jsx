@@ -17,17 +17,36 @@ function Users() {
     fetchUsers();
   }, []);
 
+  // Function to delete a user
+  const deleteUser = async (userId) => {
+    if (!window.confirm("Are you sure you want to delete this user?")) return;
+    try {
+      await axios.delete(`http://localhost:5005/users/${userId}`);
+      setUsers((prevUsers) =>
+        prevUsers.filter((user) => (user.id || user._id) !== userId)
+      );
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      alert("Failed to delete user.");
+    }
+  };
+
   return (
     <>
       <h2>USER</h2>
       <div className="users-list">
         <ul>
           {users.map((user) => (
-            <div className="user-card" key={user.id}>
+            <div className="user-card" key={user.id || user._id}>
               <p>Name: {user.username}</p>
               <p>Email: {user.email}</p>
               <p>Role: {user.role}</p>
-              <button className="del-user">Delete User</button>
+              <button
+                className="del-user"
+                onClick={() => deleteUser(user.id || user._id)}
+              >
+                Del User
+              </button>
             </div>
           ))}
         </ul>
